@@ -28,14 +28,27 @@ O projeto possui uma pipeline de **Continuous Deployment (CD)** utilizando **Git
 - Publicação automática da imagem no Docker Hub
 - Deploy automático na Vercel a partir da branch `main`
 
+As credenciais e tokens sensíveis são armazenados de forma segura utilizando **GitHub Secrets**.
+
 ---
 
 ## 🐳 Como rodar o projeto com Docker
 
-### Pré-requisitos
+⚠️ **Importante:** o front-end **depende do back-end em execução** para funcionar corretamente.  
+O back-end deve estar acessível na porta **5000**.
+
+---
+
+### ▶️ Rodando **sem Docker Compose**
+
+Este modo assume que o **back-end já está rodando**, seja:
+- localmente (`npm run dev` / `npm start`), ou
+- via Docker / Docker Compose no repositório do back-end.
+
+#### Pré-requisitos
 - Docker instalado
 
-### Passos
+#### Passos
 
 ```bash
 docker build -t bingo-driven-frontend .
