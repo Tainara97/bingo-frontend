@@ -2,14 +2,14 @@ FROM node:20-slim AS build
 
 WORKDIR /app
 
-ENV VITE_BACKEND=""
+ARG VITE_BACKEND
+ENV VITE_BACKEND=$VITE_BACKEND
 
 COPY package*.json ./
 RUN npm install
 
 COPY . .
 RUN npm run build
-
 
 FROM nginx:alpine
 

@@ -1,0 +1,8 @@
+services:
+  frontend:
+    build:
+      context: .
+      args:
+        VITE_BACKEND: http://localhost:5000
+    ports:
+      - "80:80"
