@@ -53,3 +53,7 @@ Este modo assume que o **back-end já está rodando**, seja:
 ```bash
 docker build -t bingo-driven-frontend .
 docker run -p 80:80 bingo-driven-frontend
+
+A aplicação ficará disponível em:
+http://localhost
+
